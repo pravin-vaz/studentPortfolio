@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Arcade Games Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    🎮 Mr. Vaz's Software Development Class - Student Portfolio 🎮
+</header>
+
+<div class="controls">
+    <input type="text" id="search" placeholder="Search games...">
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</div>
+
+<div class="container" id="game-container">
+    <!-- Game 1 -->
+    <div class="game-card" data-title="Space Adventure" onclick="openModal('Space Adventure','https://arcade.makecode.com/S32756-40562-56497-07539')">
+        <div class="game-title">Space Adventure</div>
+        <iframe src="https://arcade.makecode.com/S32756-40562-56497-07539"></iframe>
+        <button class="like-btn" onclick="event.stopPropagation(); likeGame(1)">👍 Like</button>
+        <span class="like-count" id="like-count-1">0 Likes</span>
+    </div>
+
+    <!-- Game 2 -->
+    <div class="game-card" data-title="Jump Quest" onclick="openModal('Jump Quest','https://arcade.makecode.com/---embed#pub:YOUR_EMBED_CODE_2')">
+        <div class="game-title">Jump Quest</div>
+        <iframe src="https://arcade.makecode.com/---embed#pub:YOUR_EMBED_CODE_2"></iframe>
+        <button class="like-btn" onclick="event.stopPropagation(); likeGame(2)">👍 Like</button>
+        <span class="like-count" id="like-count-2">0 Likes</span>
+    </div>
+
+    <!-- Game 3 -->
+    <div class="game-card" data-title="Maze Runner" onclick="openModal('Maze Runner','https://arcade.makecode.com/---embed#pub:YOUR_EMBED_CODE_3')">
+        <div class="game-title">Maze Runner</div>
+        <iframe src="https://arcade.makecode.com/---embed#pub:YOUR_EMBED_CODE_3"></iframe>
+        <button class="like-btn" onclick="event.stopPropagation(); likeGame(3)">👍 Like</button>
+        <span class="like-count" id="like-count-3">0 Likes</span>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="gameModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <iframe id="modal-iframe" src=""></iframe>
+    </div>
+</div>
+
+<footer>
+    © Pravin Vaz 2025
+</footer>
+
+
+
+
+<script src="script.js"></script> 
+</body>
+</html>

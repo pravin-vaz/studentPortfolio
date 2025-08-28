@@ -1,0 +1,144 @@
+body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f6f7;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        transition: background 0.3s, color 0.3s;
+    }
+    header {
+        background-color: #f4d9d0;
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #5d5d5d;
+        position: relative;
+    }
+    .controls {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        gap: 10px;
+    }
+    input[type="text"] {
+        padding: 8px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+    .toggle-btn {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: #cdeac0;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+    .toggle-btn:hover {
+        background-color: #a6d49f;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .game-card {
+        background-color: #fff8f0;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        padding: 15px;
+        text-align: center;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
+    .game-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #6d6d6d;
+    }
+    iframe {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        border: none;
+    }
+    .like-btn {
+        background-color: #cdeac0;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 1rem;
+        color: #444;
+        transition: 0.3s;
+    }
+    .like-btn:hover {
+        background-color: #a6d49f;
+    }
+    .like-count {
+        display: block;
+        margin-top: 5px;
+        color: #666;
+    }
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #f4d9d0;
+        color: #5d5d5d;
+        font-size: 0.9rem;
+    }
+
+    /* Dark mode */
+    body.dark {
+        background-color: #2b2b2b;
+        color: #f4f4f4;
+    }
+    body.dark header, body.dark footer {
+        background-color: #4d4d4d;
+        color: #f4f4f4;
+    }
+    body.dark .game-card {
+        background-color: #3a3a3a;
+    }
+    body.dark .toggle-btn {
+        background-color: #9cc4a1;
+    }
+
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        background: #fff8f0;
+        padding: 20px;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        position: relative;
+    }
+    .modal iframe {
+        width: 100%;
+        height: 400px;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #555;
+    }
